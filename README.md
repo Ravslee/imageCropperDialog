@@ -1,37 +1,5 @@
 # ImageCropperExample
 
-
-#HTML
-<input type="file" (change)="fileChangeEvent($event)" />
-
-<br>
-<br>
-<br>
-<img [src]="croppedImage" style="width: 100%" />
-
-
-#TS file
- `imageChangedEvent: any = '';
-  fileChangeEvent(event: any): void {
-    this.imageChangedEvent = event;
-    this.openCropperDialog()
-
-  }
-
-
-  openCropperDialog() {
-    const dialogRef = this.dialog.open(CropperComponent, {
-      width: '720px',
-      data: { "event": this.imageChangedEvent,"aspectRatio":16/9,"maintainAspectRatio":true}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      
-      this.croppedImage = result;
-    });
-  }`
-
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 ## Development server
