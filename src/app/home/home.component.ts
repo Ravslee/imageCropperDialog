@@ -14,19 +14,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  croppedImage: any = '';
 
   imageChangedEvent: any = '';
-  croppedImage: any = '';
 
   fileChangeEvent(event: any): void {
     this.imageChangedEvent = event;
-    console.log(event);
-    this.openCropperDialog(event)
+    this.openCropperDialog()
 
   }
 
 
-  openCropperDialog(data) {
+  openCropperDialog() {
     const dialogRef = this.dialog.open(CropperComponent, {
       width: '720px',
       data: { "event": this.imageChangedEvent,"aspectRatio":16/9,"maintainAspectRatio":true}
