@@ -9,17 +9,9 @@
 <br>
 <img [src]="croppedImage" style="width: 100%" />
 
-<input type="file" (change)="fileChangeEvent($event)" />
-
-<br>
-<br>
-<br>
-<img [src]="croppedImage" style="width: 100%" />
-
 
 #TS file
- imageChangedEvent: any = '';
-
+ `imageChangedEvent: any = '';
   fileChangeEvent(event: any): void {
     this.imageChangedEvent = event;
     this.openCropperDialog()
@@ -37,7 +29,7 @@
       
       this.croppedImage = result;
     });
-  }
+  }`
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
